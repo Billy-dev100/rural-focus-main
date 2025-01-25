@@ -2,3 +2,5 @@
   [module.hugoVersion]
     extended = true
     min = "0.126.0"
+
+defaultContentLanguage = "en"
