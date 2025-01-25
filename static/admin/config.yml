@@ -1,0 +1,47 @@
+backend: git-gateway
+  branch: master
+  repo: https://github.com/Billy-dev100/rural-focus-main.git
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+  open_authoring: true
+media_folder: /assets
+public_folder: /assets
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "_pages/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Featured Image", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "SEO Title", name: "seo_title", widget: "string"}
+          - {label: "SEO Description", name: "seo_description", widget: "string"}
+          - {label: "SEO Keywords", name: "seo_keywords", widget: "string"}
+          - {label: "SEO Image", name: "seo_image", widget: "image"}
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "_settings/general.md"
+        label: "General"
+        name: "general"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "settings"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
