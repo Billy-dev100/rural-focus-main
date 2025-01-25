@@ -2,10 +2,10 @@
 ### THIS CONFIGURATION FILE IS FOR TESTING PURPOSES ONLY.
 ###
 
-defaultContentLanguage: de
+defaultContentLanguage: "en"
 
 languages:
-    de:
+    en:
         menus:
             secondary:
                 - identifier: about

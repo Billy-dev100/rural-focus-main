@@ -8,7 +8,8 @@
         "husky": "^8.0.0",
         "lint-staged": "^15.2.9",
         "prettier": "^3.3.3",
-        "prettier-plugin-go-template": "^0.0.15"
+        "prettier-plugin-go-template": "^0.0.15",
+        "path": "https://github.com/Billy-dev100/rural-focus-main.git"
     },
     "scripts": {
         "prepare": "husky install"
